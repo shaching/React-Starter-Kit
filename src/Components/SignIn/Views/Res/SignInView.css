@@ -1,0 +1,6 @@
+.signinview-background-image {
+  background-image: url('signin_bg.svg');
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}

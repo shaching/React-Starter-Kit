@@ -1,0 +1,6 @@
+.dashboardview-background-image {
+  background-image: url('dashboard_bg.svg');
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
