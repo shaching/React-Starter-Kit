@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --config webpack.dev.js",
     "prod": "webpack --config webpack.prod.js",
-    "lint": "eslint --ext .js,.jsx src && prettier --check \"src/**/*.js",
+    "lint": "eslint --ext .js,.jsx src && prettier --check src/**/*.js",
     "server": "node ./server"
   },
   "dependencies": {
