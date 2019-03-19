@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -92,6 +93,10 @@ module.exports = {
     },
   },
   plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
     new HtmlWebpackPlugin({
       title: 'React-Starter-Kit',
       template: 'index.html',
