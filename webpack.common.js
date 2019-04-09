@@ -7,7 +7,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
-    main: ['@babel/polyfill', './src/index.js'],
+    main: ['@babel/polyfill/noConflict', './src/index.js'],
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.css'],
@@ -37,10 +37,7 @@ module.exports = {
           path.resolve(__dirname, 'node_modules/bootstrap/dist/css/'),
           path.resolve(__dirname, 'node_modules/typeface-roboto/'),
         ],
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)(\?.+)?$/,
@@ -107,9 +104,7 @@ module.exports = {
     }),
     new FileManagerPlugin({
       onStart: {
-        delete: [
-          './dist/',
-        ],
+        delete: ['./dist/'],
       },
     }),
   ],

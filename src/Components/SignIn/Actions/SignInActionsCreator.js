@@ -19,7 +19,4 @@ const signIn = (account, password) => {
   };
 };
 
-export {
-  signInStart,
-  signIn,
-};
+export { signInStart, signIn };

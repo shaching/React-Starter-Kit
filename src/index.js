@@ -8,10 +8,9 @@ import { renderRoutes } from 'react-router-config';
 import { BrowserRouter } from 'react-router-dom';
 import 'typeface-roboto';
 
-ReactDOM.render((
+ReactDOM.render(
   <Provider store={Store}>
-    <BrowserRouter>
-      {renderRoutes(routes)}
-    </BrowserRouter>
-  </Provider>
-), document.getElementById('root'));
+    <BrowserRouter>{renderRoutes(routes)}</BrowserRouter>
+  </Provider>,
+  document.getElementById('root'),
+);

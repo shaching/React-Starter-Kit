@@ -2,18 +2,11 @@ import * as SignInActions from '@/Components/SignIn/Actions/SignInActions';
 import '@/Components/SignIn/Views/Res/SignInView';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  Button,
-  Card,
-  Col,
-  Container,
-  Form,
-  Row,
-} from 'react-bootstrap';
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
 
 export default class SignInView extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
